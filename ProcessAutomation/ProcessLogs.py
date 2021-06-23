@@ -12,7 +12,7 @@ def ProcessDisplay(FolderName="LogHistory"):
     if not os.path.exists(FolderName):
         os.mkdir(FolderName)
         
-    File_Path=os.path.join(FolderName,"ProcessLog%s.txt"%(time.ctime()))    # os.path.join(FolderName,"Marvellous%s.log"%(time.ctime())) 
+    File_Path=os.path.join(FolderName,"ProcessLog%s.txt"%(time.ctime()))    # os.path.join(FolderName,"ProcessLog%s.log"%(time.ctime())) 
     File_Path=(File_Path.replace(" ","").replace(":",""))
     fd=open(File_Path,"w")
 
