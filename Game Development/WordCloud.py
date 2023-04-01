@@ -65,7 +65,9 @@ pygame.mixer.music.play()
 NewWord()
 #To continuosly run the game loop
 while True:
+	print("Inside while loop")
 	if (score>=50 and score<100):
+		print("Inside score>=50 and score<100")
 		if score<55:
 			print("Speed after 50 :",speed)
 			pygame.display.update()
@@ -77,6 +79,7 @@ while True:
 		font=pygame.font.SysFont("ComicSansMs",35)
 		win.blit(cloud,(word_x-35,word_y-30))
 	elif (score>=150 and score<250):
+		print("Inside score>=150 and score<250")
 		if score<155:
 			print("Speed after 150 :",speed)
 			pygame.display.update()
@@ -110,6 +113,7 @@ while True:
 		win.blit(cloud,(word_x-35,word_y-30))
 
 	else:
+		print("Inside else")
 		win.blit(bg1,(0,0))
 		win.blit(cloud,(word_x-25,word_y-20))
 	win.blit(text,(word_x,word_y))
@@ -133,7 +137,7 @@ while True:
 					time.sleep(0.02)
 					pygame.display.update()
 					speed+=0.05
-					print(speed)
+					print("Inside innermost loop",speed)
 					print(word_y)
 					NewWord()
 			else:
